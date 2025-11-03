@@ -9,6 +9,35 @@ export function TextProvider({ children }) {
   const [changename,setchangename]=useState("")
   const [changeemail,setchangeemail]=useState("")
  const [person,setperson]=useState(data?data:{});
+ const [phone,setphone]=useState("none");
+const [earphone,setearphone]=useState("none");
+const [smartwatch,setSmartwatch]=useState("none");
+const [products,setproducts]=useState("");
+function Products(){
+setSmartwatch("none");
+setearphone("none");
+setphone("none");
+setproducts("")
+}
+function Phone(){
+setSmartwatch("none");
+setearphone("none");
+setphone("");
+setproducts("none")
+}
+function Earphone(){
+setSmartwatch("none");
+setearphone("");
+setphone("none");
+setproducts("none")
+}
+function Smartwatch(){
+setSmartwatch("");
+setearphone("none");
+setphone("none");
+setproducts("none")
+}
+
  useEffect(()=>{
 
 },[person])
@@ -36,11 +65,12 @@ function UPdataEmail() {
  }
 
 
-  function add(name ,price){
+  function add(name ,price,photo){
     let va={
       name:name,
       price:price,
-      id:Date.now()
+      id:Date.now(),
+      photo:photo
     };
     const va2=[...vall,va];
     setVal(va2)
@@ -58,7 +88,7 @@ function UPdataEmail() {
     
   }
   return (
-    <Text.Provider value={{add,vall,setVal ,delet ,person,Person,buy ,setperson ,setchangename,setchangeemail ,UPdataEmail,UPdataName,changename,changeemail}}>
+    <Text.Provider value={{add,vall,setVal ,delet ,person,Person,buy ,setperson ,setchangename,setchangeemail ,UPdataEmail,UPdataName,changename,changeemail,phone,Phone,earphone,Earphone,products,Products,smartwatch,Smartwatch}}>
       {children}
     </Text.Provider>
   ); 

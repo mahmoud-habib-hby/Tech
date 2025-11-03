@@ -9,9 +9,11 @@ export default function HOMME(){
 
     <div className="home">
         <div className="left">
-            <span className="name">Shoes collection</span>
-            <span>A shoe store that sells shoes in different colors</span>
-            <Link className="link btn btn-success" to={"/product"}>product</Link>
+          <span className="name">tech products</span>
+          <span style={{ color: "#F9F3EF" }}>
+           tech products phone earphone smartWatch
+          </span>
+            <Link className="link btn btn-outline-primary" to={"/product"}>product</Link>
         </div>
     </div>
     </>
